@@ -9,9 +9,9 @@ import UIKit
 
 public final class AnimationContainerView: UIView {
     
-    init(frame: CGRect, color: UIColor? = .white) {
+    init(frame: CGRect, backgroundColor: UIColor? = .white) {
         super.init(frame: frame)
-        backgroundColor = color
+        self.backgroundColor = backgroundColor
     }
 
     required init?(coder: NSCoder) {

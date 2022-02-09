@@ -12,6 +12,7 @@ class BLZLoad: BLZAnimationProtocol {
         animateLetters(layer: layer, size: CGSize(width: layer.bounds.width / 3, height: layer.bounds.height / 3), color: color)
     }
 
+    // Shapes
     private func stick(size: CGSize, color: UIColor) -> CALayer {
         let layer = CAShapeLayer()
         let path = UIBezierPath()
@@ -74,79 +75,7 @@ class BLZLoad: BLZAnimationProtocol {
         let dBotHalf = halfStick(size: size, color: color)
         let dCenterHalf = dSticks(size: size, color: color)
 
-        lStick.frame = CGRect(x: layer.bounds.size.width / 10,
-                              y: (layer.bounds.size.height - size.height) / 2,
-                              width: size.width,
-                              height: size.height)
-
-        lBottom.frame = CGRect(x: lStick.frame.minX - (lBottom.bounds.height / 2),
-                               y: lStick.frame.maxY - (lBottom.bounds.height / 2),
-                               width: size.width,
-                               height: size.height)
-
-        oLeft.frame = CGRect(x: (lStick.frame.minX + separator) + (lBottom.bounds.height / 2),
-                             y: (layer.bounds.size.height - size.height) / 2,
-                             width: size.width,
-                             height: size.height)
-
-        oBottom.frame = CGRect(x: oLeft.frame.minX - (oBottom.bounds.height / 2),
-                               y: oLeft.frame.maxY - (oBottom.bounds.height / 2),
-                             width: size.width,
-                             height: size.height)
-
-        oRight.frame = CGRect(x: oLeft.frame.minX + (oBottom.bounds.height / 2),
-                              y: (layer.bounds.size.height - size.height) / 2,
-                              width: size.width,
-                              height: size.height)
-        oTop.frame = CGRect(x: oLeft.frame.minX - (oBottom.bounds.height / 2),
-                            y: oRight.frame.minY - (oTop.bounds.height / 2),
-                              width: size.width,
-                              height: size.height)
-        
-        aLeft.frame = CGRect(x: oRight.frame.minX + separator,
-                             y: (layer.bounds.size.height - size.height) / 2,
-                               width: size.width,
-                               height: size.height)
-        aTop.frame  = CGRect(x: aLeft.frame.minX - (aTop.frame.height / 2),
-                             y: aLeft.frame.minY - (aTop.frame.height / 2),
-                               width: size.width,
-                               height: size.height)
-        aBottom.frame = CGRect(x: aLeft.frame.minX - (aBottom.bounds.height / 2),
-                               y: aLeft.frame.midY - (aBottom.bounds.height / 2),
-                                 width: size.width,
-                                 height: size.height)
-        aRight.frame = CGRect(x: aLeft.frame.minX + (aBottom.bounds.height / 2),
-                              y: (layer.bounds.size.height - size.height) / 2,
-                                width: size.width,
-                                height: size.height)
-        dStick.frame = CGRect(x: aRight.frame.minX + separator,
-                              y: (layer.bounds.size.height - size.height) / 2,
-                                width: size.width,
-                                height: size.height)
-        dBotHalf.frame = CGRect(x: (aRight.frame.minX + separator) - (dBotHalf.bounds.height / 2),
-                                y: dStick.frame.maxY - (dBotHalf.bounds.height / 2),
-                                  width: size.width,
-                                  height: size.height)
-        dTopHalf.frame = CGRect(x: (aRight.frame.minX + separator) - (dBotHalf.bounds.height / 2),
-                                y: dStick.frame.minY - (dBotHalf.bounds.height / 2),
-                                  width: size.width,
-                                  height: size.height)
-        dCenterHalf.frame = CGRect(x: dTopHalf.frame.minX + (size.height / 2) * sin(CGFloat.pi / 4),
-                                   y: dStick.frame.minY - ((size.height / 4) / 2),
-                                   width: size.width,
-                                   height: size.height)
-
-        lBottom.anchorPoint = CGPoint(x: 0, y: 0.5)
-        oTop.anchorPoint = CGPoint(x: 0, y: 0)
-        oBottom.anchorPoint = CGPoint(x: 0, y: 0.5)
-        aTop.anchorPoint = CGPoint(x: 0, y: 0)
-        aBottom.anchorPoint = CGPoint(x: 0, y: 0)
-        dTopHalf.anchorPoint = CGPoint(x: 0, y: 0)
-        dBotHalf.anchorPoint = CGPoint(x: 0, y: 0.5)
-        dCenterHalf.anchorPoint = CGPoint(x: 0, y: 0)
-        dCenterHalf.opacity = 0.0
-
-        // Keyframe Animations for L
+        // Keyframe Animations
         let rotateL: CAKeyframeAnimation = {
             let keyframeAnimation = CAKeyframeAnimation()
             keyframeAnimation.keyPath = "transform.rotation.z"
@@ -259,6 +188,81 @@ class BLZLoad: BLZAnimationProtocol {
             return keyframeAnimation
         }()
 
+        // Frame
+        lStick.frame = CGRect(x: layer.bounds.size.width / 10,
+                              y: (layer.bounds.size.height - size.height) / 2,
+                              width: size.width,
+                              height: size.height)
+
+        lBottom.frame = CGRect(x: lStick.frame.minX - (lBottom.bounds.height / 2),
+                               y: lStick.frame.maxY - (lBottom.bounds.height / 2),
+                               width: size.width,
+                               height: size.height)
+
+        oLeft.frame = CGRect(x: (lStick.frame.minX + separator) + (lBottom.bounds.height / 2),
+                             y: (layer.bounds.size.height - size.height) / 2,
+                             width: size.width,
+                             height: size.height)
+
+        oBottom.frame = CGRect(x: oLeft.frame.minX - (oBottom.bounds.height / 2),
+                               y: oLeft.frame.maxY - (oBottom.bounds.height / 2),
+                             width: size.width,
+                             height: size.height)
+
+        oRight.frame = CGRect(x: oLeft.frame.minX + (oBottom.bounds.height / 2),
+                              y: (layer.bounds.size.height - size.height) / 2,
+                              width: size.width,
+                              height: size.height)
+        oTop.frame = CGRect(x: oLeft.frame.minX - (oBottom.bounds.height / 2),
+                            y: oRight.frame.minY - (oTop.bounds.height / 2),
+                              width: size.width,
+                              height: size.height)
+        
+        aLeft.frame = CGRect(x: oRight.frame.minX + separator,
+                             y: (layer.bounds.size.height - size.height) / 2,
+                               width: size.width,
+                               height: size.height)
+        aTop.frame  = CGRect(x: aLeft.frame.minX - (aTop.frame.height / 2),
+                             y: aLeft.frame.minY - (aTop.frame.height / 2),
+                               width: size.width,
+                               height: size.height)
+        aBottom.frame = CGRect(x: aLeft.frame.minX - (aBottom.bounds.height / 2),
+                               y: aLeft.frame.midY - (aBottom.bounds.height / 2),
+                                 width: size.width,
+                                 height: size.height)
+        aRight.frame = CGRect(x: aLeft.frame.minX + (aBottom.bounds.height / 2),
+                              y: (layer.bounds.size.height - size.height) / 2,
+                                width: size.width,
+                                height: size.height)
+        dStick.frame = CGRect(x: aRight.frame.minX + separator,
+                              y: (layer.bounds.size.height - size.height) / 2,
+                                width: size.width,
+                                height: size.height)
+        dBotHalf.frame = CGRect(x: (aRight.frame.minX + separator) - (dBotHalf.bounds.height / 2),
+                                y: dStick.frame.maxY - (dBotHalf.bounds.height / 2),
+                                  width: size.width,
+                                  height: size.height)
+        dTopHalf.frame = CGRect(x: (aRight.frame.minX + separator) - (dBotHalf.bounds.height / 2),
+                                y: dStick.frame.minY - (dBotHalf.bounds.height / 2),
+                                  width: size.width,
+                                  height: size.height)
+        dCenterHalf.frame = CGRect(x: dTopHalf.frame.minX + (size.height / 2) * sin(CGFloat.pi / 4),
+                                   y: dStick.frame.minY - ((size.height / 4) / 2),
+                                   width: size.width,
+                                   height: size.height)
+
+        // Anchor points
+        lBottom.anchorPoint = CGPoint(x: 0, y: 0.5)
+        oTop.anchorPoint = CGPoint(x: 0, y: 0)
+        oBottom.anchorPoint = CGPoint(x: 0, y: 0.5)
+        aTop.anchorPoint = CGPoint(x: 0, y: 0)
+        aBottom.anchorPoint = CGPoint(x: 0, y: 0)
+        dTopHalf.anchorPoint = CGPoint(x: 0, y: 0)
+        dBotHalf.anchorPoint = CGPoint(x: 0, y: 0.5)
+        dCenterHalf.anchorPoint = CGPoint(x: 0, y: 0)
+        dCenterHalf.opacity = 0.0
+
+        // Add animations
         lBottom.add(rotateL, forKey: "transform.rotation.z")
         oTop.add(rotateOTop, forKey: "transform.rotation.z")
         oBottom.add(rotateOBottom, forKey: "transform.rotation.z")
@@ -269,6 +273,7 @@ class BLZLoad: BLZAnimationProtocol {
         dCenterHalf.add(rotateDstick, forKey: "transform.rotation.z")
         dCenterHalf.add(dStickOpacity, forKey: "opacity")
 
+        // Add sublayer
         layer.addSublayer(lStick)
         layer.addSublayer(lBottom)
         layer.addSublayer(oLeft)

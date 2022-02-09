@@ -12,7 +12,7 @@
 		01CEF1E427A53BE3001CE2BA /* BLZShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEF1E327A53BE2001CE2BA /* BLZShapes.swift */; };
 		01CEF1E627A542CD001CE2BA /* BLZLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEF1E527A542CD001CE2BA /* BLZLoad.swift */; };
 		01CEF1E827A93C40001CE2BA /* BLZDropFall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEF1E727A93C40001CE2BA /* BLZDropFall.swift */; };
-		01CEF1EA27AE4FDD001CE2BA /* ContentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEF1E927AE4FDD001CE2BA /* ContentContainer.swift */; };
+		01CEF1EA27AE4FDD001CE2BA /* AnimationContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEF1E927AE4FDD001CE2BA /* AnimationContainerView.swift */; };
 		01CEF1EC27AE500A001CE2BA /* AnimationsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEF1EB27AE5009001CE2BA /* AnimationsEnum.swift */; };
 		01CEF1EE27AEA8CE001CE2BA /* BLZFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEF1ED27AEA8CE001CE2BA /* BLZFlower.swift */; };
 		01E1C1C7279AE90C00CC49EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1C1C6279AE90C00CC49EB /* AppDelegate.swift */; };
@@ -31,7 +31,7 @@
 		01CEF1E327A53BE2001CE2BA /* BLZShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLZShapes.swift; sourceTree = "<group>"; };
 		01CEF1E527A542CD001CE2BA /* BLZLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLZLoad.swift; sourceTree = "<group>"; };
 		01CEF1E727A93C40001CE2BA /* BLZDropFall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLZDropFall.swift; sourceTree = "<group>"; };
-		01CEF1E927AE4FDD001CE2BA /* ContentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentContainer.swift; sourceTree = "<group>"; };
+		01CEF1E927AE4FDD001CE2BA /* AnimationContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationContainerView.swift; sourceTree = "<group>"; };
 		01CEF1EB27AE5009001CE2BA /* AnimationsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsEnum.swift; sourceTree = "<group>"; };
 		01CEF1ED27AEA8CE001CE2BA /* BLZFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLZFlower.swift; sourceTree = "<group>"; };
 		01E1C1C3279AE90C00CC49EB /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				01E1C1CA279AE90C00CC49EB /* ViewController.swift */,
-				01CEF1E927AE4FDD001CE2BA /* ContentContainer.swift */,
+				01CEF1E927AE4FDD001CE2BA /* AnimationContainerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,7 +252,7 @@
 				01CEF1E627A542CD001CE2BA /* BLZLoad.swift in Sources */,
 				01E1C1C9279AE90C00CC49EB /* SceneDelegate.swift in Sources */,
 				01E4056227AFAA20007CB03E /* BLZShip.swift in Sources */,
-				01CEF1EA27AE4FDD001CE2BA /* ContentContainer.swift in Sources */,
+				01CEF1EA27AE4FDD001CE2BA /* AnimationContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

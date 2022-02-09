@@ -21,7 +21,7 @@ class BLZFlower: BLZAnimationProtocol {
         let flower = Shapes.flower.createShape(size: CGSize(width: flowerSize, height: flowerSize), color: color)
         let mask = Shapes.mask.createShape(size: CGSize(width: layer.bounds.width, height: layer.bounds.height), color: color)
 
-        let positionMask: CAKeyframeAnimation = {
+        let flowerPosition: CAKeyframeAnimation = {
             let keyframeAnimation = CAKeyframeAnimation()
             keyframeAnimation.keyPath = "position.y"
             keyframeAnimation.values = [0, -flowerSize, -flowerSize, 0]
@@ -80,7 +80,7 @@ class BLZFlower: BLZAnimationProtocol {
         layer.mask = mask
         flower.frame = flowerFrame
         flowerPot.frame = frame
-        flower.add(positionMask, forKey: "position.y")
+        flower.add(flowerPosition, forKey: "position.y")
         flowerPot.add(animation, forKey: "animation")
         layer.addSublayer(flowerPot)
         layer.addSublayer(flower)

@@ -21,27 +21,27 @@ class ViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
 
         let squares = AnimationContainerView(frame: CGRect(x: view.center.x - 60, y: view.center.y - 60, width: 120, height: 120),
-                                             color: #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1))
+                                             backgroundColor: #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1))
         squares.addAnimation(animation: .fourSquares, color: .systemIndigo)
         view.addSubview(squares)
 
         let dropFall = AnimationContainerView(frame: CGRect(x: squares.frame.minX - 130, y: squares.frame.minY, width: 120, height: 120),
-                                              color: .systemPink)
+                                              backgroundColor: .systemPink)
         dropFall.addAnimation(animation: .dropFall, color: .cyan)
         view.addSubview(dropFall)
 
         let flower = AnimationContainerView(frame: CGRect(x: squares.frame.minX + 130, y: squares.frame.minY, width: 120, height: 120),
-                                            color: .cyan)
+                                            backgroundColor: .cyan)
         flower.addAnimation(animation: .flower, color: .systemPink)
         view.addSubview(flower)
 
         let load = AnimationContainerView(frame: CGRect(x: squares.frame.minX, y: squares.frame.minY + 130, width: 120, height: 120),
-                                          color: .black)
+                                          backgroundColor: .black)
         load.addAnimation(animation: .load, color: .orange)
         view.addSubview(load)
 
         let ship = AnimationContainerView(frame: CGRect(x: squares.frame.minX, y: squares.frame.minY - 130, width: 120, height: 120),
-                                          color: .systemTeal)
+                                          backgroundColor: .systemTeal)
         ship.addAnimation(animation: .ship, color: .systemGray4)
         view.addSubview(ship)
 
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     
     func justOne() {
         let ship = AnimationContainerView(frame: CGRect(x: view.center.x - 150, y: view.center.y - 150, width: 300, height: 300),
-                                          color: .systemTeal)
+                                          backgroundColor: .systemTeal)
         ship.addAnimation(animation: .ship, color: .systemGray4)
         view.addSubview(ship)
         ship.layer.cornerRadius = ship.bounds.size.width / 2
